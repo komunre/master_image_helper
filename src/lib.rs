@@ -49,6 +49,10 @@ pub mod image {
             self.a
         }
 
+        pub fn bit_depth(&self) -> &png::BitDepth {
+            &self.bit_depth
+        }
+
         pub fn mut_r(&mut self) -> &mut usize {
             &mut self.r
         }
