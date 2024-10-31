@@ -101,7 +101,7 @@ pub mod image {
 
             let index: usize = (f64::from((y * self.width + x) as u32 * elements) * bytes) as usize;
 
-            if index < 0 || index > self.pixels.len() {
+            if index > self.pixels.len() {
                 return PixelData::new(BitDepth::Eight, 0, 0, 0, 0);
             }
 
