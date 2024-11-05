@@ -22,6 +22,19 @@ pub mod image {
         a: usize,
     }
 
+    impl Default for PixelData {
+        fn default() -> PixelData {
+            PixelData {
+                bit_depth: png::BitDepth::Eight,
+
+                r: 0,
+                g: 0,
+                b: 0,
+                a: 0,
+            }
+        }
+    }
+
     impl PixelData {
         pub fn new(bit_depth: png::BitDepth, r: usize, g: usize, b: usize, a: usize) -> Self {
             PixelData {
